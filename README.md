@@ -62,6 +62,7 @@ The Android app is the same UI inside a WebView. A small native plugin (`android
 | `npm run dev` | Runs Vite with hot reload and starts Electron against it |
 | `npm run build` | Builds the UI to `dist/renderer` and main/preload to `dist/main` |
 | `npm start` | Builds, then runs the production build |
+| `npm run dist` | Builds the Ubuntu/Debian package `release/cyberdeck-player_<version>_amd64.deb`; install it with `sudo apt install ./release/cyberdeck-player_*.deb` |
 | `npm run android:build` | Builds the Android debug APK |
 | `npm run android:install` | Builds the APK and installs it on the connected phone |
 | `npm run typecheck` | Type-checks the UI and the main process |

@@ -11,9 +11,10 @@
     "dev": "node scripts/dev.mjs",
     "build": "vite build && node scripts/build-main.mjs",
     "start": "npm run build && env -u ELECTRON_RUN_AS_NODE electron .",
+    "dist": "npm run build && electron-builder --linux deb",
     "android:build": "vite build && cap sync android && cd android && ./gradlew assembleDebug",
     "android:install": "npm run android:build && adb install -r android/app/build/outputs/apk/debug/app-debug.apk",
-    "typecheck":"tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json"
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json"
   },
   "dependencies": {
     "@capacitor/android": "^8.6.0",
@@ -32,8 +33,38 @@
     "@types/spotify-web-playback-sdk": "^0.1.19",
     "@vitejs/plugin-react": "^5.1.0",
     "electron": "https://github.com/castlabs/electron-releases#v44.9.3+wvcus",
+    "electron-builder": "^26.18.0",
     "esbuild": "^0.25.11",
     "typescript": "^5.9.3",
     "vite": "^7.2.0"
+  },
+  "desktopName": "cyberdeck-player.desktop",
+  "build": {
+    "appId": "dev.riagoncalves.cyberdeck",
+    "productName": "Cyberdeck Player",
+    "electronVersion": "44.9.3",
+    "electronDist": "node_modules/electron/dist",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/main/**",
+      "dist/renderer/**",
+      "package.json",
+      "!**/*.map",
+      "!node_modules/**"
+    ],
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "executableName": "cyberdeck-player",
+      "icon": "build/icon.png",
+      "category": "Audio",
+      "synopsis": "Cyberpunk player for your Spotify account",
+      "maintainer": "Ricardo Gonçalves",
+      "syncDesktopName": true
+    }
   }
 }
