@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Cyberdeck Player</string>
+    <string name="title_activity_main">Cyberdeck Player</string>
+    <string name="package_name">dev.riagoncalves.cyberdeck</string>
+    <string name="custom_url_scheme">dev.riagoncalves.cyberdeck</string>
+</resources>

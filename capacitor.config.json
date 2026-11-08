@@ -1,0 +1,12 @@
+{
+  "appId": "dev.riagoncalves.cyberdeck",
+  "appName": "Cyberdeck Player",
+  "webDir": "dist/renderer",
+  "android": {
+    "webContentsDebuggingEnabled": true,
+    "backgroundColor": "#07050d"
+  },
+  "plugins": {
+    "SystemBars": { "style": "DARK", "insetsHandling": "css" }
+  }
+}

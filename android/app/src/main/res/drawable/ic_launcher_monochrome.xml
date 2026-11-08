@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Themed (monochrome) icon: the hexagon and play mark in one colour. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:strokeColor="#FF000000" android:strokeWidth="3.5"
+        android:pathData="M40.5,30.6h27L81,54L67.5,77.4h-27L27,54z" />
+    <path android:fillColor="#FF000000" android:pathData="M47,41v26l22,-13z" />
+    <path android:fillColor="#FF000000" android:pathData="M40.5,82.5h12v2h-12z" />
+</vector>
